@@ -1,0 +1,24 @@
+server:
+  port: 2000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/SampleDB
+    username: postgres
+    password: 123
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto:
+  application:
+    name: USER_SERVICE
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:3000/eureka/
